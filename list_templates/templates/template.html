@@ -1,1 +1,32 @@
 {% extends "base.html" %}
+
+{% block content %}
+    <div style="border: 2px solid rgb(255, 255, 255); padding: 10px; margin: 0 auto; max-width: 84%; text-align: center;">
+        <table class="table table-bordered table-hover" style="width: 100%; margin: 0 auto;">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ลำดับ</th>
+                    <th scope="col">Site</th>
+                    <th scope="col">Rule</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for orders in all_orders %}
+                <tr>
+                    <th scope="row">{{ orders.id }}</th>
+                    <td>{{ orders.site }}</td>
+                    <td>{{ orders.rule }}</td>
+                    <td>{{ orders.name }}</td>
+                    <td>{{ orders.user }}</td>
+                    <td><a class="btn btn-warning">{{ orders.status }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
