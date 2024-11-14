@@ -4,5 +4,7 @@ from list_templates import views
 urlpatterns = [
     path('',views.index),
     path('template',views.template),
-    path('dashboard',views.dashboard)
+    path('dashboard',views.dashboard),
+    path('form',views.form),
+    path('create',views.create)
 ]

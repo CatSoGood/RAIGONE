@@ -14,3 +14,9 @@ def template (request):
 def dashboard(request):
     all_orders = orders.objects.all()
     return render(request, "dashboard.html", {"name":name, "all_orders":all_orders})
+
+def create(request):
+    return render(request, "create.html", {"name":name})
+
+def form(request):
+    return render(request, "form.html",{"name":name})
