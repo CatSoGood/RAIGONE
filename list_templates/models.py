@@ -11,3 +11,10 @@ class orders(models.Model) :
 
     def __str__(self):
         return self.rule +"__"+ self.name
+    
+#class case(models.Model):
+    #sites = models.CharField(max_length=20)
+    #category = models.CharField(max_length=20)
+    #subcatagory = models.CharField(max_length=20)
+    #user = models.CharField(max_length=20)
+    #dangerlevel = models.CharField(max_length=20)

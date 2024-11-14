@@ -1,2 +1,62 @@
 {% extends "base.html" %}
 
+{% block content %}
+<div class="container d-flex justify-content-center mt-5">
+    <div class="form-container shadow-sm p-4" style="max-width: 600px; width: 100%;">
+        <h2 class="form-title text-center mb-4">Select Case</h2>
+        <form class="text-start">
+            <!-- Sites Dropdown -->
+            <div class="mb-3">
+                <label for="sites" class="form-label">Sites</label>
+                <select class="form-select" id="sites" aria-label="Select Site">
+                    <option selected>Text</option>
+                    <option value="1">Site 1</option>
+                    <option value="2">Site 2</option>
+                    <option value="3">Site 3</option>
+                </select>
+            </div>
+            
+            <!-- Category Dropdown -->
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" aria-label="Select Category">
+                    <option selected>Selected item</option>
+                    <option value="1">Category 1</option>
+                    <option value="2">Category 2</option>
+                    <option value="3">Category 3</option>
+                </select>
+            </div>
+            
+            
+            <!-- User Dropdown (Required) -->
+            <!-- ต้องเปลี่ยนเอา  username มาให้เลือกตรงนี้ด้วย  -->
+
+            <div class="mb-3">
+                <label for="user" class="form-label">User</label>
+                <select class="form-select is-invalid" id="user" aria-label="Select User" required>
+                    <option value="1">User 1</option>
+                    <option value="2">User 2</option>
+                    <option value="3">User 3</option>
+                </select>
+                <div class="invalid-feedback">Require</div>
+            </div>
+            
+            <!-- Danger Dropdown (Required) -->
+            <div class="mb-3">
+                <label for="danger" class="form-label">Danger Level</label>
+                <select class="form-select is-invalid" id="danger" aria-label="Select Danger" required>
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                    <option value="4">Critical</option>
+                    <option value="5">INFORMATION</option>
+                </select>
+                <div class="invalid-feedback">Require</div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-submit w-100">SUBMIT</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
